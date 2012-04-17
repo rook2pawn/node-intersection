@@ -47,7 +47,7 @@ var intersection = function() {
         var s = vector.AB(b);
         return (vector.crossProduct(r,s) === 0);
     };
-    self.isColinear = function(a,b) {
+    self.isCollinear = function(a,b) {
         // a and b are line segments. 
         // returns true if a and b are co-linear
         var p = vector.oA(a);
@@ -68,13 +68,15 @@ var intersection = function() {
 };
 intersection.intersectSegments = intersection().intersectSegments;
 intersection.intersect = intersection().safeIntersect;
+intersection.isParallel = intersection().isParallel;
+intersection.isCollinear = intersection().isCollinear;
 intersection.descriptionSegments = function(a,b) {
-    var isColinear = intersection().isColinear(a,b);
+    var isCollinear = intersection().isCollinear(a,b);
     var isParallel = intersection().isParallel(a,b);
     var pointOfIntersection = undefined;
     if (isParallel === false) {
         pointOfIntersection = intersection().intersectSegments(a,b);
     }
-    return {colinear: isColinear,parallel: isParallel,intersection:pointOfIntersection};
+    return {collinear: isCollinear,parallel: isParallel,intersection:pointOfIntersection};
 };
 exports = module.exports = intersection;

@@ -1,0 +1,28 @@
+{
+  "author": "David Wee <rook2pawn@gmail.com> (http://rook2pawn.com)",
+  "name": "intersection",
+  "description": "fast line intersection",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rook2pawn/node-intersection",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rook2pawn/node-intersection.git"
+  },
+  "keywords" : [
+    "line intersection",
+    "intersection",
+    "graphic",
+    "vector",
+    "cross product"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test/test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

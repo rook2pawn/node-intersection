@@ -8,11 +8,17 @@ intersection
     intersection.intersect(seg2,seg3); 
     // {x:2.8,y:2}
 
+.intersect(a,b)
+===============
+
+.intersect(a,b) takes two line segments a and b and returns their point of intersection.
+Returns false if they are collinear or parallel.
+
 .descriptionSegments(a,b)
 =========================
 
 .descriptionSegments(a,b) takes two line segments a and b and returns a 
-report about thier co-linearity, if they are paralell, and the intersection
+report about thier co-linearity, if they are parallel, and the intersection
 if defined.
 
     var segA = {start:{x:3,y:0},end:{x:3,y:4}};
@@ -32,6 +38,17 @@ if defined.
     intersection.descriptionSegments(segA,segB);
     // {colinear:false, parallel:false, intersection:{x:2.8,y:2}
 
+
+.isParallel(a,b)
+================
+
+Returns true if a and b are parallel line segments, false otherwise.
+
+.isCollinear(a,b)
+================
+
+Returns true if a and b are collinear line segments, false otherwise.
+Collinear segments means the segments lie on the same line.
 
 Notes
 =====

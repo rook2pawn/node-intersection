@@ -3,10 +3,10 @@ var intersection = require('../index');
 exports.descriptionTest = function(test) {
     var seg1 = {start:{x:3,y:0},end:{x:3,y:4}};
     
-    // colinear with seg1
+    // collinear with seg1
     var seg1a = {start:{x:3,y:-2},end:{x:3, y:9}}; 
 
-    // parallel but not colinear with seg1
+    // parallel but not collinear with seg1
     var seg1b = {start:{x:1, y:-1}, end:{x:1, y:5}};
 
  
@@ -14,9 +14,9 @@ exports.descriptionTest = function(test) {
     var seg3 = {start:{x:1,y:-1}, end:{x:4,y:4}};
     
     test.expect(3);
-    test.deepEqual({colinear:false, parallel:false, intersection:{x:3,y:2}},intersection.descriptionSegments(seg1,seg2));
-    test.deepEqual({colinear:true, parallel:true,intersection:undefined}, intersection.descriptionSegments(seg1,seg1a));
-    test.deepEqual({colinear:false, parallel:true,intersection:undefined}, intersection.descriptionSegments(seg1,seg1b));
+    test.deepEqual({collinear:false, parallel:false, intersection:{x:3,y:2}},intersection.descriptionSegments(seg1,seg2));
+    test.deepEqual({collinear:true, parallel:true,intersection:undefined}, intersection.descriptionSegments(seg1,seg1a));
+    test.deepEqual({collinear:false, parallel:true,intersection:undefined}, intersection.descriptionSegments(seg1,seg1b));
     test.done();
 };
 
@@ -44,10 +44,10 @@ exports.basicTest = function(test) {
 exports.safeIntersectionTest = function(test) {
     var seg1 = {start:{x:3,y:0},end:{x:3,y:4}};
     
-    // colinear with seg1
+    // collinear with seg1
     var seg1a = {start:{x:3,y:-2},end:{x:3, y:9}}; 
 
-    // parallel but not colinear with seg1
+    // parallel but not collinear with seg1
     var seg1b = {start:{x:1, y:-1}, end:{x:1, y:5}};
 
  
@@ -68,13 +68,13 @@ exports.testReadmeExamples = function(test) {
     test.deepEqual({x:2.8,y:2},intersection.intersect(seg2,seg3));
 
     var segA = {start:{x:3,y:0},end:{x:3,y:4}};
-    // colinear with segA
+    // collinear with segA
     var segA_1 = {start:{x:3,y:-2},end:{x:3, y:9}};
-    // parallel but not colinear with seg1
+    // parallel but not collinear with seg1
     var segA_2 = {start:{x:1, y:-1}, end:{x:1, y:5}};
 
 
-    test.deepEqual({colinear:true, parallel:true,intersection:undefined}, intersection.descriptionSegments(segA,segA_1));
-    test.deepEqual({colinear:false, parallel: true, intersection:undefined}, intersection.descriptionSegments(segA,segA_2));
+    test.deepEqual({collinear:true, parallel:true,intersection:undefined}, intersection.descriptionSegments(segA,segA_1));
+    test.deepEqual({collinear:false, parallel: true, intersection:undefined}, intersection.descriptionSegments(segA,segA_2));
     test.done();
 };
