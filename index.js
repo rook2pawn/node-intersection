@@ -67,7 +67,7 @@ var intersection = function() {
     return self;
 };
 intersection.intersectSegments = intersection().intersectSegments;
-intersection.intersect = intersection().safeIntersect();
+intersection.intersect = intersection().safeIntersect;
 intersection.descriptionSegments = function(a,b) {
     var isColinear = intersection().isColinear(a,b);
     var isParallel = intersection().isParallel(a,b);
