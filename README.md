@@ -2,10 +2,10 @@ intersection
 ============
     
     var intersection = require('intersection');
-    var segA = { start: {x:3,y:0},end: {x:3,y:4}};
-    var segB = { start: {x:1,y:-1},end: {x:4,y:4}};
+    var seg2 = {start:{x:-1,y:2}, end:{x:5,y:2}};
+    var seg3 = {start:{x:1,y:-1}, end:{x:4,y:4}};
 
-    intersection.intersect(segA,segB); 
+    intersection.intersect(seg2,seg3); 
     // {x:2.8,y:2}
 
 .descriptionSegments(a,b)
@@ -14,6 +14,8 @@ intersection
 .descriptionSegments(a,b) takes two line segments a and b and returns a 
 report about thier co-linearity, if they are paralell, and the intersection
 if defined.
+
+    var segA = {start:{x:3,y:0},end:{x:3,y:4}};
 
     // colinear with segA
     var segA_1 = {start:{x:3,y:-2},end:{x:3, y:9}};
