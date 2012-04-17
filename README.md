@@ -45,6 +45,23 @@ Notes II
 Intersection utilizes the fast cross-product method as outlined by Ronald Grahm
 in "Graphics Gems I".
 
+Test Results and Benchmarks
+===========================
+
+From nodeunit test/test.js
+
+    nodeunit test.js 
+
+    test.js
+    ✔ descriptionTest
+    ✔ basicTest
+    ✔ safeIntersectionTest
+    ✔ testReadmeExamples
+
+    OK: 13 assertions (21ms)
+
+
+
 TODO
 ====
 
