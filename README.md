@@ -14,10 +14,10 @@ intersection
 .intersect(a,b) takes two line segments a and b and returns their point of intersection.
 Returns false if they are collinear or parallel.
 
-.descriptionSegments(a,b)
+.describe(a,b)
 =========================
 
-.descriptionSegments(a,b) takes two line segments a and b and returns a 
+.describe(a,b) takes two line segments a and b and returns a 
 report about thier co-linearity, if they are parallel, and the intersection
 if defined.
 
@@ -29,13 +29,13 @@ if defined.
     // parallel but not colinear with seg1
     var segA_2 = {start:{x:1, y:-1}, end:{x:1, y:5}};
 
-    intersection.descriptionSegments(segA,segA_1);
+    intersection.describe(segA,segA_1);
     // {colinear:true, parallel:true,intersection:undefined}
 
-    intersection.descriptionSegments(segA,segA_2);
+    intersection.describe(segA,segA_2);
     // {colinear:false, parallel:true,intersection:undefined}
 
-    intersection.descriptionSegments(segA,segB);
+    intersection.describe(segA,segB);
     // {colinear:false, parallel:false, intersection:{x:2.8,y:2}
 
 

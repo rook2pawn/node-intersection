@@ -14,9 +14,9 @@ exports.descriptionTest = function(test) {
     var seg3 = {start:{x:1,y:-1}, end:{x:4,y:4}};
     
     test.expect(3);
-    test.deepEqual({collinear:false, parallel:false, intersection:{x:3,y:2}},intersection.descriptionSegments(seg1,seg2));
-    test.deepEqual({collinear:true, parallel:true,intersection:undefined}, intersection.descriptionSegments(seg1,seg1a));
-    test.deepEqual({collinear:false, parallel:true,intersection:undefined}, intersection.descriptionSegments(seg1,seg1b));
+    test.deepEqual({collinear:false, parallel:false, intersection:{x:3,y:2}},intersection.describe(seg1,seg2));
+    test.deepEqual({collinear:true, parallel:true,intersection:undefined}, intersection.describe(seg1,seg1a));
+    test.deepEqual({collinear:false, parallel:true,intersection:undefined}, intersection.describe(seg1,seg1b));
     test.done();
 };
 
@@ -74,7 +74,7 @@ exports.testReadmeExamples = function(test) {
     var segA_2 = {start:{x:1, y:-1}, end:{x:1, y:5}};
 
 
-    test.deepEqual({collinear:true, parallel:true,intersection:undefined}, intersection.descriptionSegments(segA,segA_1));
-    test.deepEqual({collinear:false, parallel: true, intersection:undefined}, intersection.descriptionSegments(segA,segA_2));
+    test.deepEqual({collinear:true, parallel:true,intersection:undefined}, intersection.describe(segA,segA_1));
+    test.deepEqual({collinear:false, parallel: true, intersection:undefined}, intersection.describe(segA,segA_2));
     test.done();
 };
